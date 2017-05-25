@@ -1,0 +1,57 @@
+@model ResultViewModel
+@{
+    ViewData["Title"] = "Microsoft Cognitive Services - Emotion API Sample";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Microsoft Cognitive Services - Emotion API Sample</h2>
+        <p>分析したい画像のURLを入力してください。</p>
+        <form asp-controller="Home" asp-action="Result" method="post">
+            <input asp-for="Url" /> <br />
+            <button type="submit">分析する</button>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <h3>@ViewData["Result"]</h3>
+    <div class="col-md-2">
+        <table border="0" cellpadding="0">
+            <tr>
+                <td><label asp-for="@Model.Anger"></label></td>
+                <td>@Html.DisplayFor(model => model.Anger)</td>                
+            </tr>
+            <tr>
+                <td><label asp-for="@Model.Contempt"></label></td>
+                <td>@Html.DisplayFor(model => model.Contempt)</td>
+            </tr>
+            <tr>
+                <td><label asp-for="@Model.Disgust"></label></td>
+                <td>@Html.DisplayFor(model => model.Disgust)</td>
+            </tr>
+            <tr>
+                <td><label asp-for="@Model.Fear"></label></td>
+                <td>@Html.DisplayFor(model => model.Fear)</td>
+            </tr>
+            <tr>
+                <td><label asp-for="@Model.Happiness"></label></td>
+                <td>@Html.DisplayFor(model => model.Happiness)</td>
+            </tr>
+            <tr>
+                <td><label asp-for="@Model.Neutral"></label></td>
+                <td>@Html.DisplayFor(model => model.Neutral)</td>
+            </tr>
+            <tr>
+                <td><label asp-for="@Model.Sadness"></label></td>
+                <td>@Html.DisplayFor(model => model.Sadness)</td>
+            </tr>
+            <tr>
+                <td><label asp-for="@Model.Surprise"></label></td>
+                <td>@Html.DisplayFor(model => model.Surprise)</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-10">
+        <img src="@Model.Url" width="400" />
+    </div>
+</div>
