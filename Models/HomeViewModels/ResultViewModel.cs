@@ -24,13 +24,13 @@ namespace WebApplication.Models.HomeViewModels
         [Display(Name = "喜び")]
         [DisplayFormat(DataFormatString = "{0:0.000000}")]
         public double Happiness { get; set; }
-        [Display(Name = "喜び")]
+        [Display(Name = "無表情")]
         [DisplayFormat(DataFormatString = "{0:0.000000}")]
         public double Neutral { get; set; }
         [Display(Name = "悲しみ")]
         [DisplayFormat(DataFormatString = "{0:0.000000}")]
         public double Sadness { get; set; }
-        [Display(Name = "喜び")]
+        [Display(Name = "驚き")]
         [DisplayFormat(DataFormatString = "{0:0.000000}")]
         public double Surprise { get; set; }
     }
